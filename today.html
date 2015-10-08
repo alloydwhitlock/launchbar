@@ -59,9 +59,11 @@ var DUH_WORDS = /\b(call|meeting|conference)\b/gi;
 var MULTIPLE_SPACE = /\s+/g;
 
 function pluginParse(event) {
+  // filter out events that start with --
   if (event.name.indexOf('--') == 0)
     return null;
   
+  // remove word cruft from event name
   event.name = event.name.replace(DUH_WORDS,"");
   event.name = event.name.replace(MULTIPLE_SPACE, " ");
   
@@ -72,8 +74,8 @@ function pluginParse(event) {
         
         <p>Once you have the <code>plugin.js</code> written, add a <b>relative file path</b> <code>pluginFile</code> key to this action's preferences file. Note: this must be a relative path due to the behavior of the LaunchBar <a href="https://developer.obdev.at/resources/documentation/launchbar-developer-documentation/#/javascript-global-functions/function-include"><code>include</code></a> method.
         <pre>
-<key>pluginFile</key>
-<string>../../../../Action Support/com.renaghan.launchbar.Today/plugin.js</string>
+&lt;key&gt;pluginFile&lt;/key&gt;
+&lt;string&gt;../../../../Action Support/com.renaghan.launchbar.Today/plugin.js&lt;/string&gt;
         </pre>
         
         <pre id="changelog" data-name="Today"></pre>        
