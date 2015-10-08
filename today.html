@@ -47,11 +47,11 @@
           <li>Open Event URL
         </ul>
         
-        <p>Uses the command line <a href="http://hasseg.org/icalBuddy/">icalBuddy</a> program to access your calendar information. Make sure you have icalBuddy installed before running this action. Supports all command line options of icalBuddy via this action's preferences file</p>
+        <p>Uses the command line <a href="http://hasseg.org/icalBuddy/">icalBuddy</a> program to access your calendar information. Make sure you have icalBuddy installed before running this action. Supports all command line options of icalBuddy via this action's preferences file.</p>
         
         <p>Hold down the ⌥ key when running the action to get additional debugging information returned</p>
         
-        <p>Parsing event information can be very locale and personally specific. Therefore this action allows you to implement your own javascript parsing of the event information. After running this action the first time reate <code>plugin.js</code> in <code>~/Library/Application Support/LaunchBar/Action Support/com.renaghan.launchbar.Today</code> folder. In that file implement at least the <code>pluginParse(event)</code> method that takes the event data as input and returns the filtered/parsed event.</p>
+        <p>Parsing event information can be very locale and personally specific. Therefore this action allows you to implement your own javascript parsing of the event information. After running this action the first time create <code>plugin.js</code> in <code>~/Library/Application Support/LaunchBar/Action Support/com.renaghan.launchbar.Today</code> folder. In that file implement at least the <code>pluginParse(event)</code> method that takes the event data as input and returns the filtered/parsed event.</p>
         
         <pre>
 // Example plugin.js
@@ -68,6 +68,12 @@ function pluginParse(event) {
   // do built in parsing
   return parse(event);
 }
+        </pre>
+        
+        <p>Once you have the <code>plugin.js</code> written, add a <b>relative file path</b> <code>pluginFile</code> key to this action's preferences file. Note: this must be a relative path due to the behavior of the LaunchBar <a href="https://developer.obdev.at/resources/documentation/launchbar-developer-documentation/#/javascript-global-functions/function-include"><code>include</code></a> method.
+        <pre>
+<key>pluginFile</key>
+<string>../../../../Action Support/com.renaghan.launchbar.Today/plugin.js</string>
         </pre>
         
         <pre id="changelog" data-name="Today"></pre>        
