@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Today View LaunchBar Action</title>
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@prenagha">
+    <meta name="twitter:title" content="Today View LaunchBar Action">
+    <meta name="twitter:description" content="LaunchBar action that lets you easily see today's events on your calendar and initiate conference calls.">
+    <meta name="twitter:image" content="http://prenagha.github.io/launchbar/img/today1.png">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="javascripts/slideme.js"></script>
+    <link rel="stylesheet" href="stylesheets/slideme.css" type="text/css" media="all"/>
+    <link rel="alternate" type="application/atom+xml" title="Padraic Renaghan LaunchBar Actions" href="/launchbar/feed.xml" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://www.obdev.at/products/launchbar/index.html"><img src="images/lb.png" height="75" width="75"/></a>
+        <a href="index.html"><h1>LaunchBar Actions</h1></a>
+        <p class="view"><a href="https://github.com/prenagha/launchbar">View on GitHub <small>prenagha/launchbar</small>
+          <img src="images/github.png" height="50" width="50"/></a></p>
+        <p class="view"><a href="https://twitter.com/prenagha">Twitter <small>@prenagha</small>
+          <img src="images/tw.png" height="50" width="50"/></a></p>
+        <p class="view"><a href="/launchbar/feed.xml"><i class="fa fa-rss"></i> News Feed</a></p>
+      </header>
+      <section>
+        <h2><i class="fa fa-calendar fa-lg"></i> Today View</h2>
+
+        <p><a href="https://dl.dropboxusercontent.com/u/1094926/lbdist/Today.lbaction"><i class="fa fa-download fa-lg"></i> Download signed Today.lbaction</a></p>
+
+        <p>Action that displays calendar events from today (and optionally beyond) directly within LaunchBar. Allows you to see and take actions with those events:
+        <ul>
+          <li>Dial With iPhone
+          <li>Display in Large Type
+          <li>Open in Maps
+          <li>Open Event URL
+        </ul>
+        
+        <p>Uses the command line <a href="http://hasseg.org/icalBuddy/">icalBuddy</a> program to access your calendar information. Make sure you have icalBuddy installed before running this action. Supports all command line options of icalBuddy via this action's preferences file</p>
+        
+        <p>Hold down the ⌥ key when running the action to get additional debugging information returned</p>
+        
+        <p>Parsing event information can be very locale and personally specific. Therefore this action allows you to implement your own javascript parsing of the event information. After running this action the first time reate <code>plugin.js</code> in <code>~/Library/Application Support/LaunchBar/Action Support/com.renaghan.launchbar.Today</code> folder. In that file implement at least the <code>pluginParse(event)</code> method that takes the event data as input and returns the filtered/parsed event.</p>
+        
+        <pre>
+// Example plugin.js
+var DUH_WORDS = /\b(call|meeting|conference)\b/gi;
+var MULTIPLE_SPACE = /\s+/g;
+
+function pluginParse(event) {
+  if (event.name.indexOf('--') == 0)
+    return null;
+  
+  event.name = event.name.replace(DUH_WORDS,"");
+  event.name = event.name.replace(MULTIPLE_SPACE, " ");
+  
+  // do built in parsing
+  return parse(event);
+}
+        </pre>
+        
+        <pre id="changelog" data-name="Today"></pre>        
+        <p><small>Supports <a href="updates.html">Action Updates</a> framework and action</small>
+
+        <div id="slider" class="slides">
+          <ul class="slideme">
+            <li><img src="img/today1.png" alt="Today List"></li>
+            <li><img src="img/today2.png" alt="Today Actions"></li>
+          </ul>
+        </div>
+        
+      </section>
+    </div>
+    <script src="javascripts/main.js"></script>    
+  </body>
+</html>
