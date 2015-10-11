@@ -53,6 +53,8 @@
         
         <p>Parsing event information can be very locale and personally specific. Therefore this action allows you to implement your own javascript parsing of the event information. After running this action the first time create <code>plugin.js</code> in <code>~/Library/Application Support/LaunchBar/Action Support/com.renaghan.launchbar.Today</code> folder. In that file implement at least the <code>pluginParse(event)</code> method that takes the event data as input and returns the filtered/parsed event.</p>
         
+        <p>This action uses <a href="http://momentjs.com">Moment JS</a> for date and time handling. Date and time formatting can be overridden in this action's preferences file. See keys <code>momentJs*</code>. Each corresponds to a <code>moment.format()</code> <a href="http://momentjs.com/docs/#/displaying/format/">pattern</a>.
+        
         <pre>
 // Example plugin.js
 var DUH_WORDS = /\b(call|meeting|conference)\b/gi;
