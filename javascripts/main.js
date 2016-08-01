@@ -32,7 +32,7 @@ $(document).ready(function() {
   });
   
   var $cl = $('#changelog').first();
-  if ($cl) {
+  if ($cl.size() > 0) {
     var url = "https://raw.githubusercontent.com/prenagha/launchbar/master/" + $cl.data("name") + ".lbaction/Contents/Info.plist";
     $.get(url, function(data) {
       var a = data.indexOf("<key>CFBundleVersion</key>");
