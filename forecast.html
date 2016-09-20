@@ -8,7 +8,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@prenagha">
     <meta name="twitter:title" content="Forecast LaunchBar Action">
-    <meta name="twitter:description" content="LaunchBar action that displays weather forecast for a location using forecast data from forecast.io">
+    <meta name="twitter:description" content="LaunchBar action that displays weather forecast for a location using forecast data from darksky.net">
     <meta name="twitter:image" content="http://prenagha.github.io/launchbar/img/f5.png">
 
     <link rel="stylesheet" href="stylesheets/styles.css">
@@ -48,7 +48,7 @@
 
         <p><a href="https://s3.amazonaws.com/renaghan/lbdist/Forecast.lbaction"><i class="fa fa-download fa-lg"></i> Download signed Forecast.lbaction</a></p>
 
-        <p>Custom action that displays weather forecast for a location using forecast data from <a href="http://forecast.io">forecast.io <img src="images/forecastio.png" height="25" width="25"/></a></p>
+        <p>Custom action that displays weather forecast for a location using forecast data from <a href="http://darksky.net">Dark Sky <img src="images/forecastio.png" height="25" width="25"/></a></p>
 
         <ul>
         <li>Weather warnings/watches alerts</li>
@@ -57,13 +57,13 @@
         <li>Manage multiple locations</li>
         <li>Magic, "Follow Me", location shows location for wherever you are</li>
         <li>Custom name and icons for locations</li>
-        <li>Support for <a href="https://developer.forecast.io/docs/v2">US, metric, Canada, and UK</a> units, °F and °C</li>
+        <li>Support for <a href="https://darksky.net/dev/docs">US, metric, Canada, and UK</a> units, °F and °C</li>
         <li>Support for <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO</a> country based location search</li>
-        <li>Limited non-English language support currently, but if anyone is interested in translating fully into a <a href="https://developer.forecast.io/docs/v2">Forecast language (German, French, Spanish, Dutch, Tetum, Polish, Portuguese, Russian, Bosnian)</a> let me know and I will localize if you can provide the translation</li>
+        <li>Limited non-English language support currently, but if anyone is interested in translating fully into a <a href="https://darksky.net/dev/docs">Forecast language (German, French, Spanish, Dutch, Tetum, Polish, Portuguese, Russian, Bosnian)</a></li>
         </ul><p><strong>Installation:</strong></p>
 
         <ul>
-        <li>Signup for a free <a href="https://developer.forecast.io">forecast.io developer account</a> and have your API key ready</li>
+        <li>Signup for a free <a href="https://darksky.net/dev/">Dark Sky developer account</a> and have your API key ready</li>
         <li>Install free <a href="http://www.mousedown.net/mouseware/LocationHelper.html">Location Helper for Applescript</a> app from
         Mac App Store</li>
         <li>Install the action by double clicking on the <code>Forecast.lbaction</code> file you downloaded</li>
@@ -108,8 +108,7 @@
         <p><strong>Thanks to:</strong></p>
 
         <ul>
-        <li>Forecast data from <a href="http://forecast.io">forecast.io</a>. Makers of the great
-        <a href="http://darkskyapp.com">Dark Sky</a> iOS application.</li>
+        <li>Forecast data from <a href="http://darksky.net">Dark Sky</a></li>
         <li>Images from <a href="http://adamwhitcroft.com/climacons/">Climacons</a> </li>
         <li>SVG to PNG image conversion and color change with <a href="http://www.imagemagick.org">ImageMagick</a>
         <code>mogrify -path ../PNG -transparent white -fill "#F2AF00" -opaque black -density 800 -format png *.svg</code>
