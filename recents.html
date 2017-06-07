@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Recent Files LaunchBar Action</title>
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@prenagha">
+    <meta name="twitter:title" content="Recent Files LaunchBar Action">
+    <meta name="twitter:description" content="LaunchBar action that returns recent files from a Spotlight/Finder Smart Folder/Saved Search">
+    <meta name="twitter:image" content="http://prenagha.github.io/launchbar/img/recent1.png">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://use.fontawesome.com/cd46857ef6.js"></script>        <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="javascripts/slideme.js"></script>
+    <link rel="stylesheet" href="stylesheets/slideme.css" type="text/css" media="all"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://www.obdev.at/products/launchbar/index.html"><img src="images/lb.png" height="75" width="75"/></a>
+        <a href="index.html"><h1>LaunchBar Actions</h1></a>
+        <p class="view"><a href="https://github.com/prenagha/launchbar">View on GitHub <small>prenagha/launchbar</small>
+          <img src="images/github.png" height="50" width="50"/></a></p>
+        <p class="view"><a href="https://twitter.com/prenagha">Twitter <small>@prenagha</small>
+          <img src="images/tw.png" height="50" width="50"/></a></p>
+      </header>
+      <section>
+        <h2><i class="fa fa-clock-o fa-lg"></i> Recent Files</h2>
+
+        <p><a href="https://s3.amazonaws.com/renaghan/lbdist/Recents.lbaction"><i class="fa fa-download fa-lg"></i> Download signed Recents.lbaction</a></p>
+
+        <p>Action that runs a Finder/Spotlight Saved Search/Smart Folder and returns the results to LaunchBar. Used most commonly with a Saved Search that returns recent (created, opened, modified) files and folders.</p>
+
+        <ol>
+          <li>Create your Saved Search in Finder, name it &quot;Recents&quot; and save it. See this <a href='http://prenagha.github.io/launchbar/img/recent3.png'>example</a>
+          <li>Run the action, so the default preferences get set
+          <li>Open the action preferences file <code>~/Library/Application Support/LaunchBar/Action Support/com.renaghan.launchbar.Recents</code> and edit the find command to your liking
+          <li>See the man page for mdfind for more information
+        </ol>
+
+        <pre id="changelog" data-name="Recents"></pre>        
+        <p><small>Supports <a href="updates.html">Action Updates</a> framework and action</small>
+
+        <div id="slider" class="slides">
+          <ul class="slideme">
+            <li><img src="img/recent1.png" alt="Recents Action"></li>
+            <li><img src="img/recent2.png" alt="Recents Results"></li>
+            <li><img src="img/recent3.png" alt="Sample Saved Search"></li>
+          </ul>
+        </div>
+        
+      </section>
+    </div>
+    <script src="javascripts/main.js"></script>    
+  </body>
+</html>
