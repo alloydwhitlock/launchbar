@@ -3,14 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Parallels LaunchBar Action</title>
+    <title>Share a File LaunchBar Action</title>
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@prenagha">
-    <meta name="twitter:title" content="Parallels LaunchBar Action">
-    <meta name="twitter:description" content="LaunchBar action that lets you see and manage (Start, Stop, Suspend, Resume, Pause) your Parallels virtual machines">
-    <meta name="twitter:image" content="http://prenagha.github.io/launchbar/img/par1.png">
-
+    <meta name="twitter:title" content="Share a File LaunchBar Action">
+    <meta name="twitter:description" content="LaunchBar action that will share a file via Amazon AWS S3">
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -32,32 +30,16 @@
           <img src="images/tw.png" height="50" width="50"/></a></p>
       </header>
       <section>
-        <h2><i class="fa fa-desktop fa-lg"></i> Parallels</h2>
+        <h2><i class="fa fa-share fa-lg"></i> Share a File</h2>
 
-        <p><a href="https://s3.amazonaws.com/renaghan/lbdist/Parallels.lbaction"><i class="fa fa-download fa-lg"></i> Download signed Parallels.lbaction</a></p>
+        <p><a href="https://s3.amazonaws.com/renaghan/lbdist/Share.lbaction"><i class="fa fa-download fa-lg"></i> Download signed Share.lbaction</a></p>
 
-        <p>Action that lets you see that status of and manage your <a href="http://www.parallels.com/">Parallels</a> virtual machines
-        <ul>
-          <li>Start
-          <li>Stop
-          <li>Pause
-          <li>Suspend
-          <li>Resume
-          <li>Capture Screen Print
-        </ul>
-                
-        <p>Hold down the ⌥ key when running the action to get additional debugging information returned</p>
-                
-        <pre id="changelog" data-name="Parallels"></pre>        
+        <p>Action that will share a file or directory via Amazon AWS S3 bucket. Requires an existing S3 bucket with appropriate Amazon AWS CLI setup.
+
         <p><small>Supports <a href="updates.html">Action Updates</a> framework and action</small>
 
-        <div id="slider" class="slides">
-          <ul class="slideme">
-            <li><img src="img/par1.png" alt="Parallels List"></li>
-            <li><img src="img/par2.png" alt="Parallels Actions"></li>
-          </ul>
-        </div>
-        
+        <pre id="changelog" data-name="Share"></pre>        
+                
       </section>
     </div>
     <script src="javascripts/main.js"></script>    
