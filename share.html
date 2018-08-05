@@ -36,6 +36,25 @@
 
         <p>Action that will share a file or directory via Amazon AWS S3 bucket. Requires an existing S3 bucket with appropriate Amazon AWS CLI setup.
 
+        <p>Sample AWS IAM policy</p>
+        <pre>
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1395152138077",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::mybucket/share/*"
+            ]
+        }
+    ]
+}
+</pre>        
         <p><small>Supports <a href="updates.html">Action Updates</a> framework and action</small>
 
         <pre id="changelog" data-name="Share"></pre>        
